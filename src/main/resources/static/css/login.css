@@ -1,0 +1,454 @@
+/* =========================================================
+   LOGIN PAGE FULL PREMIUM BLACK ANIMATION CSS
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL
+========================= */
+body{
+    background: #000 !important;
+}
+
+/* LOGIN CARD */
+
+.login-card{
+    background: rgba(0,0,0,0.75) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    backdrop-filter: blur(15px);
+    border-radius: 20px !important;
+    box-shadow: 0px 0px 30px rgba(0,123,255,0.3);
+}
+
+/* TEXT COLOR */
+
+.login-card .card-header,
+.login-card .card-body,
+.login-card .card-footer,
+.login-card label,
+.login-card p,
+.login-card a{
+    color: white !important;
+}
+
+/* INPUT */
+
+.login-card .form-control{
+    background: rgba(255,255,255,0.08) !important;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white !important;
+}
+
+.login-card .form-control:focus{
+    background: rgba(255,255,255,0.12) !important;
+    border: 1px solid #0d6efd;
+    box-shadow: 0 0 15px rgba(13,110,253,0.5);
+}
+
+/* BUTTON */
+
+.login-card .btn{
+    background: linear-gradient(45deg,#0d6efd,#6610f2) !important;
+    border: none;
+    transition: 0.4s;
+}
+
+.login-card .btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 20px rgba(13,110,253,0.6);
+}
+
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    background: linear-gradient(
+        -45deg,
+        #000000,
+        #0f0f0f,
+        #1b1b1b,
+        #000000
+    );
+    background-size:400% 400%;
+    animation: bgAnimation 12s ease infinite;
+    position:relative;
+}
+
+/* =========================
+   ANIMATED BACKGROUND
+========================= */
+
+@keyframes bgAnimation{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* Glowing Circles */
+
+body::before,
+body::after{
+    content:'';
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    z-index:0;
+}
+
+body::before{
+    width:350px;
+    height:350px;
+    background:rgba(0,123,255,0.25);
+    top:-120px;
+    left:-120px;
+    animation: glowMove1 8s infinite alternate;
+}
+
+body::after{
+    width:400px;
+    height:400px;
+    background:rgba(138,43,226,0.25);
+    bottom:-150px;
+    right:-150px;
+    animation: glowMove2 10s infinite alternate;
+}
+
+@keyframes glowMove1{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(80px,60px);
+    }
+}
+
+@keyframes glowMove2{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(-80px,-60px);
+    }
+}
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+section{
+    min-height:100vh;
+    justify-content:left;
+	text-align:left;
+    align-items:center;
+    position:relative;
+    z-index:1;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   IMAGE ANIMATION
+========================= */
+
+.col-md-6 img{
+    animation: floatImage 4s ease-in-out infinite;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.5));
+}
+
+@keyframes floatImage{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+
+.card{
+    border:none !important;
+    border-radius:25px !important;
+    overflow:hidden;
+    background:rgba(255,255,255,0.08) !important;
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.08) !important;
+    box-shadow:0 8px 40px rgba(0,0,0,0.6);
+    animation: cardZoom 1s ease;
+    transition:0.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 15px 45px rgba(0,0,0,0.8);
+}
+
+@keyframes cardZoom{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.card-header{
+    background:transparent !important;
+    border:none !important;
+}
+
+.fs-4{
+    font-size:35px !important;
+    font-weight:700;
+    color:#fff;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    animation:textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow{
+    from{
+        text-shadow:0 0 10px rgba(255,255,255,0.2);
+    }
+    to{
+        text-shadow:0 0 20px rgba(0,123,255,0.8);
+    }
+}
+
+/* =========================
+   FORM LABEL
+========================= */
+
+.form-label{
+    color:#fff;
+    font-weight:500;
+    margin-bottom:8px;
+}
+
+.form-label i{
+    margin-right:8px;
+    color:#0d6efd;
+    animation: iconPulse 1.5s infinite;
+}
+
+@keyframes iconPulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.2);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+.form-control{
+    height:50px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.1);
+    background:rgba(255,255,255,0.08);
+    color:#fff;
+    padding-left:15px;
+    transition:0.4s ease;
+    box-shadow:none !important;
+}
+
+.form-control:focus{
+    background:rgba(255,255,255,0.12);
+    border:1px solid #0d6efd;
+    transform:scale(1.02);
+    box-shadow:0 0 20px rgba(13,110,253,0.5) !important;
+    color:#fff;
+}
+
+.form-control::placeholder{
+    color:#ccc;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+    height:50px;
+    border:none !important;
+    border-radius:50px !important;
+    font-size:18px;
+    font-weight:600;
+    background:linear-gradient(45deg,#0d6efd,#6610f2) !important;
+    color:#fff !important;
+    transition:0.4s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Shine Effect */
+
+.btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,0.3);
+    transform:skewX(-30deg);
+    transition:0.7s;
+}
+
+.btn:hover::before{
+    left:100%;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.03);
+    box-shadow:0 10px 30px rgba(13,110,253,0.4);
+}
+
+/* =========================
+   FOOTER LINKS
+========================= */
+
+.card-footer{
+    background:transparent !important;
+    border:none !important;
+    color:#fff;
+}
+
+.card-footer a{
+    color:#0d6efd;
+    text-decoration:none;
+    transition:0.4s ease;
+    font-weight:500;
+}
+
+.card-footer a:hover{
+    color:#fff;
+    letter-spacing:1px;
+    text-shadow:0 0 10px #0d6efd;
+}
+
+/* =========================
+   ALERT BOX
+========================= */
+
+.alert{
+    border:none !important;
+    border-radius:12px;
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake{
+    0%{
+        transform:translateX(0);
+    }
+    25%{
+        transform:translateX(-5px);
+    }
+    50%{
+        transform:translateX(5px);
+    }
+    75%{
+        transform:translateX(-5px);
+    }
+    100%{
+        transform:translateX(0);
+    }
+}
+
+/* =========================
+   INPUT ANIMATION
+========================= */
+
+.mb-3{
+    animation: slideInput 1s ease;
+}
+
+.mb-3:nth-child(1){
+    animation-delay:0.2s;
+}
+
+.mb-3:nth-child(2){
+    animation-delay:0.4s;
+}
+
+@keyframes slideInput{
+    from{
+        opacity:0;
+        transform:translateX(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    body{
+        overflow:auto;
+    }
+
+    .col-md-6 img{
+        height:250px !important;
+        margin-bottom:20px;
+    }
+
+    .card{
+        margin-top:20px;
+    }
+
+    .fs-4{
+        font-size:28px !important;
+    }
+}

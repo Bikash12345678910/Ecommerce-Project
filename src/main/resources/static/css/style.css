@@ -1,0 +1,361 @@
+@charset "ISO-8859-1";
+
+.card-sh {
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.cat-div {
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.error {
+	color: red;
+}
+
+
+/* =========================
+   GLOBAL STYLING
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===================================
+   BODY
+=================================== */
+
+body{
+    background:
+    radial-gradient(circle at top left,#2563eb33,transparent 30%),
+    radial-gradient(circle at bottom right,#7c3aed33,transparent 30%),
+    linear-gradient(135deg,#050816,#0f172a,#111827);
+
+    min-height:100vh;
+    overflow-x:hidden;
+    color:white;
+    animation:bodyFade 1.5s ease;
+}
+
+/* ===================================
+   BODY FADE
+=================================== */
+
+@keyframes bodyFade{
+    from{
+        opacity:0;
+        transform:scale(1.03);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* ===================================
+   NAVBAR
+=================================== */
+
+.navbar{
+    background:rgba(15,23,42,0.75) !important;
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    padding:16px 30px;
+    transition:0.5s;
+    animation:navSlide 1s ease;
+}
+
+@keyframes navSlide{
+    from{
+        opacity:0;
+        transform:translateY(-100%);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===================================
+   BRAND
+=================================== */
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:white !important;
+    position:relative;
+    overflow:hidden;
+    transition:0.5s;
+}
+
+.navbar-brand::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+    transition:0.8s;
+}
+
+.navbar-brand:hover::before{
+    left:100%;
+}
+
+.navbar-brand:hover{
+    transform:scale(1.08);
+    color:#38bdf8 !important;
+}
+
+/* ===================================
+   NAV LINKS
+=================================== */
+
+.nav-link{
+    color:#e2e8f0 !important;
+    font-weight:600;
+    margin:0 10px;
+    position:relative;
+    transition:0.4s;
+    letter-spacing:0.5px;
+}
+
+/* Growing Underline */
+
+.nav-link::after{
+    content:'';
+    position:absolute;
+    left:50%;
+    bottom:-4px;
+    width:0%;
+    height:3px;
+    border-radius:20px;
+    background:linear-gradient(90deg,#38bdf8,#8b5cf6);
+    transition:0.4s;
+    transform:translateX(-50%);
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+/* Letter Glow Animation */
+
+.nav-link:hover{
+    color:#ffffff !important;
+    transform:translateY(-3px) scale(1.05);
+    text-shadow:
+    0 0 10px #38bdf8,
+    0 0 20px #38bdf8,
+    0 0 40px #8b5cf6;
+}
+
+/* ===================================
+   ICON ANIMATION
+=================================== */
+
+.nav-link i,
+.navbar-brand i{
+    transition:0.5s;
+}
+
+.nav-link:hover i,
+.navbar-brand:hover i{
+    transform:rotate(12deg) scale(1.3);
+    color:#38bdf8;
+}
+
+/* ===================================
+   DROPDOWN
+=================================== */
+
+.dropdown-menu{
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    overflow:hidden;
+    animation:dropdownFade 0.5s ease;
+}
+
+@keyframes dropdownFade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.dropdown-item{
+    color:#e2e8f0;
+    padding:14px 20px;
+    transition:0.4s;
+}
+
+.dropdown-item:hover{
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+    color:white;
+    padding-left:28px;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+.btn{
+    border-radius:40px;
+    padding:12px 28px;
+    font-weight:700;
+    transition:0.5s;
+    overflow:hidden;
+    position:relative;
+}
+
+.btn::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+    transition:0.8s;
+}
+
+.btn:hover::before{
+    left:100%;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:
+    0 10px 25px rgba(56,189,248,0.4),
+    0 0 40px rgba(139,92,246,0.4);
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.container-fluid.p-1{
+    background:rgba(15,23,42,0.9) !important;
+    backdrop-filter:blur(15px);
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding:22px !important;
+    margin-top:100px !important;
+}
+
+.container-fluid.p-1 p{
+    color:#e2e8f0;
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-align:center;
+}
+
+/* ===================================
+   FLOATING GLOW EFFECT
+=================================== */
+
+body::before{
+    content:'';
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#2563eb;
+    border-radius:50%;
+    top:-120px;
+    left:-120px;
+    filter:blur(140px);
+    opacity:0.25;
+    animation:moveGlow1 8s infinite alternate;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#7c3aed;
+    border-radius:50%;
+    bottom:-120px;
+    right:-120px;
+    filter:blur(140px);
+    opacity:0.25;
+    animation:moveGlow2 8s infinite alternate;
+}
+
+@keyframes moveGlow1{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(80px,50px);
+    }
+}
+
+@keyframes moveGlow2{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(-80px,-50px);
+    }
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(#38bdf8,#7c3aed);
+    border-radius:20px;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:991px){
+
+    .navbar{
+        padding:14px;
+    }
+
+    .nav-link{
+        margin:12px 0;
+    }
+
+    .navbar-brand{
+        font-size:24px;
+    }
+}
+

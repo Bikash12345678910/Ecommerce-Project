@@ -1,0 +1,354 @@
+/* =========================================================
+   ADD ADMIN PREMIUM FORM UI
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+
+html,
+body{
+    background:linear-gradient(135deg,#020617,#0f172a) !important;
+    min-height:100vh;
+    overflow-x:hidden;
+    color:white;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+    animation:fadeContainer 1.2s ease;
+}
+
+@keyframes fadeContainer{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card{
+
+    background:rgba(15,23,42,0.95) !important;
+
+    border-radius:25px !important;
+
+    border:1px solid rgba(255,255,255,0.08) !important;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.6) !important;
+
+    animation:cardAnimation 1s ease;
+}
+
+@keyframes cardAnimation{
+
+    from{
+        opacity:0;
+        transform:scale(0.9);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.card-header{
+
+    background:transparent !important;
+
+    border:none !important;
+
+    padding:30px 20px;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.fs-4{
+
+    font-size:36px !important;
+
+    font-weight:700;
+
+    color:#ffffff !important;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 0 10px rgba(0,229,255,0.7),
+        0 0 25px rgba(0,229,255,0.4);
+
+    animation:titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow{
+
+    from{
+        text-shadow:
+            0 0 10px #00e5ff,
+            0 0 20px #00e5ff;
+    }
+
+    to{
+        text-shadow:
+            0 0 20px #8b5cf6,
+            0 0 40px #8b5cf6;
+    }
+}
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.form-label{
+
+    color:#e2e8f0 !important;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    margin-bottom:8px;
+
+    letter-spacing:1px;
+}
+
+/* =========================================================
+   INPUT FIELD
+========================================================= */
+
+.form-control{
+
+    background:#1e293b !important;
+
+    border:1px solid rgba(255,255,255,0.08) !important;
+
+    color:#ffffff !important;
+
+    border-radius:14px !important;
+
+    padding:14px 16px !important;
+
+    font-size:15px;
+
+    transition:0.4s ease;
+
+    box-shadow:none !important;
+}
+
+/* Placeholder */
+
+.form-control::placeholder{
+    color:#94a3b8 !important;
+}
+
+/* Focus */
+
+.form-control:focus{
+
+    border-color:#00e5ff !important;
+
+    background:#111827 !important;
+
+    box-shadow:
+        0 0 15px rgba(0,229,255,0.35) !important;
+
+    transform:scale(1.02);
+}
+
+/* =========================================================
+   FILE INPUT
+========================================================= */
+
+input[type="file"]{
+
+    padding:12px !important;
+
+    color:#cbd5e1 !important;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn{
+
+    background:linear-gradient(135deg,#00e5ff,#8b5cf6) !important;
+
+    border:none !important;
+
+    border-radius:14px !important;
+
+    padding:14px !important;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-top:15px;
+
+    transition:0.4s ease;
+
+    color:white !important;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* Hover */
+
+.btn:hover{
+
+    transform:translateY(-5px) scale(1.02);
+
+    box-shadow:
+        0 15px 25px rgba(0,229,255,0.35) !important;
+}
+
+/* Button Shine */
+
+.btn::before{
+
+    content:'';
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,0.2);
+
+    transform:skewX(-30deg);
+
+    transition:0.7s;
+}
+
+.btn:hover::before{
+    left:120%;
+}
+
+/* =========================================================
+   SUCCESS MESSAGE
+========================================================= */
+
+.text-success{
+
+    color:#22c55e !important;
+
+    font-size:16px;
+
+    animation:fadeMsg 1s ease;
+}
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.text-danger{
+
+    color:#ef4444 !important;
+
+    font-size:16px;
+
+    animation:fadeMsg 1s ease;
+}
+
+@keyframes fadeMsg{
+
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================================================
+   INPUT ANIMATION
+========================================================= */
+
+.mb-3,
+.row{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+    .fs-4{
+        font-size:28px !important;
+    }
+
+    .card{
+        padding:10px;
+    }
+
+    .form-control{
+        padding:12px !important;
+    }
+
+    .btn{
+        font-size:16px;
+    }
+}

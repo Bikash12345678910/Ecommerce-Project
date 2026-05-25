@@ -1,0 +1,162 @@
+/* Background */
+body {
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Card Styling */
+.card-sh {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.card-sh:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Header */
+.card-header {
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    color: white;
+    font-weight: bold;
+    padding: 18px;
+    border-bottom: none;
+}
+
+/* Form Inputs */
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+/* Radio Buttons */
+.form-check-input:checked {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #1d4ed8, #4338ca);
+    transform: scale(1.03);
+}
+
+.btn-danger:hover {
+    transform: scale(1.03);
+}
+
+/* Table Styling */
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: #4f46e5;
+    color: white;
+}
+
+.table tbody tr {
+    transition: 0.3s;
+}
+
+.table tbody tr:hover {
+    background: #eef2ff;
+    transform: scale(1.01);
+}
+
+/* Images */
+.table img {
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.table img:hover {
+    transform: scale(1.2);
+}
+
+/* Pagination */
+.pagination .page-link {
+    border-radius: 8px;
+    margin: 0 3px;
+    color: #4f46e5;
+    transition: 0.3s;
+}
+
+.pagination .page-link:hover {
+    background: #4f46e5;
+    color: white;
+}
+
+.pagination .active .page-link {
+    background: #4f46e5;
+    border-color: #4f46e5;
+}
+
+/* Success & Error Messages */
+.text-success {
+    animation: slideDown 0.5s ease;
+}
+
+.text-danger {
+    animation: slideDown 0.5s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .card-sh {
+        margin-bottom: 20px;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+}
